@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="Machine learning illustration">
+  <rect width="360" height="200" rx="16" fill="#1b2140"/>
+  <circle cx="76" cy="100" r="22" fill="#6a8dff"/>
+  <circle cx="180" cy="58" r="18" fill="#90a8ff"/>
+  <circle cx="284" cy="100" r="22" fill="#2bb673"/>
+  <path d="M96 96L162 64M198 64L264 96" stroke="#cfd8ff" stroke-width="4" stroke-linecap="round"/>
+  <rect x="48" y="138" width="264" height="12" rx="6" fill="#3b487f"/>
+  <rect x="48" y="158" width="210" height="10" rx="5" fill="#4f72f0"/>
+</svg>

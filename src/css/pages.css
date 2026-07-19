@@ -1,0 +1,212 @@
+#landing-root .hero {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-banner {
+  display: grid;
+  gap: 1rem;
+  background: radial-gradient(circle at top right, color-mix(in srgb, var(--primary) 28%, transparent), color-mix(in srgb, var(--surface) 92%, transparent));
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.hero-kicker {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.hero-brand-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.55rem;
+}
+
+.hero-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.hero-brand-text {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.hero-title {
+  margin: 0.35rem 0;
+  font-size: 1.35rem;
+}
+
+.hero-copy {
+  margin-top: 0;
+  color: color-mix(in srgb, var(--text) 86%, transparent);
+}
+
+.hero-panel {
+  background: color-mix(in srgb, var(--surface-2) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.hero-panel p {
+  margin-top: 0;
+}
+
+.hero-art {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  margin-bottom: 0.7rem;
+}
+
+.hero-panel ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.hero-cta-row {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.cta-link {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.cta-link:hover {
+  background: var(--primary-2);
+  color: #fff;
+}
+
+.cta-link.secondary {
+  background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+  border-color: color-mix(in srgb, var(--text) 14%, transparent);
+  color: var(--text);
+}
+
+.hero-stats {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.quick-links {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.quick-links .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-links .card::after {
+  content: '';
+  position: absolute;
+  inset: auto -35% -65% auto;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 22%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 760px) {
+  .hero-banner {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+
+  .quick-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .quick-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+#tutor-root,
+#modules-root,
+#quiz-root,
+#dashboard-root,
+#settings-root {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.topic-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 760px) {
+  .topic-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.session-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hint-text {
+  margin: 0.15rem 0 0;
+  color: color-mix(in srgb, var(--text) 68%, var(--muted));
+  font-size: 0.92rem;
+}
+
+.topic-terms {
+  margin-top: 0.55rem;
+  color: var(--muted);
+}
+
+.topic-glossary {
+  margin-top: 0.7rem;
+  background: color-mix(in srgb, var(--surface-2) 88%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+  border-radius: 10px;
+  padding: 0.65rem;
+}
+
+.topic-glossary p {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.topic-glossary ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.topic-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+#quiz-result {
+  margin-top: 0.5rem;
+}
+
+.result-good { color: #8ff0bf; }
+.result-bad { color: #ff9e9e; }

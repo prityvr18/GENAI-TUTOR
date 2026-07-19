@@ -1,0 +1,188 @@
+.card {
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.9rem;
+  margin-bottom: 0.9rem;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(106, 141, 255, 0.5);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 700px) {
+  .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.input-row input,
+.input-row textarea,
+.select {
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  padding: 0.6rem 0.7rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(106, 141, 255, 0.2);
+  border: 1px solid rgba(106, 141, 255, 0.6);
+  font-size: 0.82rem;
+}
+
+.chat-log {
+  display: grid;
+  gap: 0.6rem;
+  max-height: 46vh;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.msg-glossary {
+  margin-top: 0.55rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.msg-glossary p {
+  margin: 0 0 0.35rem;
+}
+
+.msg-glossary ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.msg {
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.msg.user {
+  background: color-mix(in srgb, var(--primary) 28%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--primary) 45%, transparent);
+}
+
+.msg.tutor {
+  background: color-mix(in srgb, var(--success) 18%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--success) 45%, transparent);
+}
+
+.msg small { display: block; opacity: 0.85; margin-bottom: 0.25rem; }
+
+.topic-visual {
+  min-height: 120px;
+  border-radius: 12px;
+  border: 1px dashed color-mix(in srgb, var(--text) 18%, transparent);
+  display: grid;
+  place-items: center;
+  color: color-mix(in srgb, var(--text) 78%, var(--muted));
+  background: linear-gradient(160deg, color-mix(in srgb, var(--primary) 20%, transparent), color-mix(in srgb, var(--surface) 76%, transparent));
+}
+
+.topic-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--text) 13%, transparent);
+  margin-bottom: 0.55rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card:hover .topic-image {
+  transform: scale(1.015);
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #2a3056;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #2bb673, #62e0a8);
+}
+
+.quiz-option {
+  display: block;
+  padding: 0.35rem 0.1rem;
+}
+
+.kpi {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.progress-ring-card {
+  text-align: center;
+}
+
+.progress-ring {
+  --p: 0;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 0.45rem;
+  border-radius: 50%;
+  background: conic-gradient(var(--ring-color, #6a8dff) calc(var(--p) * 1%), rgba(255, 255, 255, 0.1) 0);
+  position: relative;
+  animation: ring-grow 900ms ease-out;
+}
+
+.progress-ring::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.progress-ring span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.progress-ring.is-completion { --ring-color: #6a8dff; }
+.progress-ring.is-score { --ring-color: #2bb673; }
+.progress-ring.is-effort { --ring-color: #ffc857; }
+
+@keyframes ring-grow {
+  from { transform: scale(0.9); opacity: 0.5; }
+  to { transform: scale(1); opacity: 1; }
+}

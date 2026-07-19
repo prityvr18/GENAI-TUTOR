@@ -1,0 +1,161 @@
+:root {
+  --bg: #0f1220;
+  --surface: #171b2e;
+  --surface-2: #1f2440;
+  --text: #eef2ff;
+  --muted: #b8c0ff;
+  --primary: #6a8dff;
+  --primary-2: #3f63dd;
+  --success: #2bb673;
+  --danger: #ff6b6b;
+  --warning: #ffc857;
+  --radius: 14px;
+  --shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  --maxw: 1100px;
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f8ff;
+  --surface: #f2f4f8;
+  --surface-2: #e5e9f2;
+  --text: #17203a;
+  --muted: #4d5b8d;
+  --primary: #4f72f0;
+  --primary-2: #3557d1;
+  --success: #1f9b60;
+  --danger: #d94f4f;
+  --warning: #b8860b;
+  --shadow: 0 12px 24px rgba(41, 55, 107, 0.13);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 86%, #000 14%), var(--bg));
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a { color: var(--muted); text-decoration: none; }
+a:hover { color: color-mix(in srgb, var(--text) 78%, #fff 22%); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 13%, transparent);
+  padding: 0.75rem 1rem;
+}
+
+.brand {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+}
+
+#main-nav {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+}
+
+#main-nav a {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-2) 80%, transparent);
+  white-space: nowrap;
+}
+
+#main-nav a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section[data-route] {
+  display: none;
+}
+
+section[data-route].is-active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 99;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input, select, button, textarea {
+  font: inherit;
+}
+
+button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { background: var(--primary-2); }
+button.secondary {
+  background: color-mix(in srgb, var(--surface-2) 85%, transparent);
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--text) 14%, transparent);
+}
+button.danger { background: var(--danger); }
+
+.no-js-note {
+  margin: 1rem;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .brand { margin-bottom: 0.6rem; font-size: 1.35rem; }
+  main { padding: 1.25rem; }
+}

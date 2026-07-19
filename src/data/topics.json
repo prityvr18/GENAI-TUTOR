@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ml-basics",
+    "title": "Machine Learning Basics",
+    "description": "How computers learn patterns from examples.",
+    "visualType": "flowchart",
+    "visualData": { "steps": ["Data", "Learning", "Prediction"] },
+    "content": "Machine learning means teaching a computer with examples so it can make smart guesses later.",
+    "glossary": {
+      "model": "A model is the pattern-finder the computer builds from data.",
+      "dataset": "A dataset is a collection of examples used for learning."
+    }
+  },
+  {
+    "id": "neural-networks",
+    "title": "Neural Networks",
+    "description": "A system inspired by how connected brain cells process signals.",
+    "visualType": "diagram",
+    "visualData": { "layers": ["Input", "Hidden", "Output"] },
+    "content": "Neural networks are made of layers that pass information forward to make decisions.",
+    "glossary": {
+      "neuron": "A tiny calculation unit in a neural network.",
+      "layer": "A group of neurons that work at the same stage."
+    }
+  },
+  {
+    "id": "nlp",
+    "title": "Natural Language Processing",
+    "description": "How computers read and generate human language.",
+    "visualType": "interactive",
+    "visualData": { "pipeline": ["Text Input", "Understanding", "Response"] },
+    "content": "NLP helps computers understand text and speech, then respond in useful ways.",
+    "glossary": {
+      "token": "A small piece of text, often a word or part of a word.",
+      "intent": "What the user is trying to do with a message."
+    }
+  },
+  {
+    "id": "computer-vision",
+    "title": "Computer Vision",
+    "description": "How AI interprets images and videos.",
+    "visualType": "diagram",
+    "visualData": { "parts": ["Pixels", "Features", "Label"] },
+    "content": "Computer vision turns image pixels into meaningful understanding, like recognizing objects.",
+    "glossary": {
+      "feature": "A useful pattern in an image, such as an edge or shape.",
+      "classification": "Assigning a label, like cat or dog, to an image."
+    }
+  }
+]
